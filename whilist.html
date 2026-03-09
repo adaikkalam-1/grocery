@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist - Grocery Website</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow-md sticky top-0 z-40 md:px-5 px-2">
+      <div class="mx-auto flex items-center justify-between p-4">
+        <div class="w-100">
+          <img src="./assets/img/logo1.png" alt="Grocery" class="h-8" />
+        </div>
+
+        <nav class="hidden md:flex gap-7 font-medium text-gray-700">
+          <a href="index.html" class="hover:text-green-400 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <a href="./whilist.html">
+            <button
+              class="bg-orange-100 text-green-600 px-3 py-2 rounded-md transition flex items-center"
+            >
+              <img src="./assets/img/love.png" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <a href="./cart.html">
+            <button
+              class="bg-green-100 text-green-600 px-3 py-2 rounded-md hover:bg-green-200 transition flex items-center"
+            >
+              <img src="./assets/img/cart.svg" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <button
+            class="hidden md:inline-block bg-green-500 text-white px-4 rounded-md hover:bg-green-600 transition h-8 flex justify-center items-center text-center"
+          >
+            Login
+          </button>
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden text-gray-700 focus:outline-none"
+            id="mobile-menu-btn"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden" id="mobile-menu" style="display: none">
+        <nav
+          class="flex flex-col bg-white px-4 py-2 gap-2 font-medium text-gray-700"
+        >
+          <a href="#" class="hover:text-green-500 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+          <button
+            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
+          >
+            Login
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="max-w-5xl min-h-screen py-5 mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
+        <div class="mb-2 py-4">
+          <h3
+            class="text-3xl font-semibold text-orange-400 text-center uppercase"
+          >
+            Wishlist
+          </h3>
+        </div>
+        <div class="grid grid-cols-1 gap-3">
+          <div
+            class="bg-white relative rounded-md shadow-sm p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+          >
+            <div class="flex items-center gap-4 w-full">
+              <img
+                src="./assets/img/product_12.jpg"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+              <img
+                src="./assets/img/love.png"
+                alt=""
+                class="h-4 w-4 absolute top-2 left-2"
+              />
+
+              <h3 class="font-semibold text-gray-800 text-sm md:text-base">
+                Organic Fresh Apples
+              </h3>
+            </div>
+
+            <div class="flex gap-2 items-center md:justify-center w-full">
+              <span class="bg-green-500 text-white px-2 py-1 rounded text-xs"
+                >1 KG</span
+              >
+              <span class="border px-2 py-1 rounded text-xs">2 KG</span>
+              <span class="border px-2 py-1 rounded text-xs">3 KG</span>
+            </div>
+
+            <div
+              class="flex items-center justify-between md:justify-end gap-8 w-full"
+            >
+              <div>
+                <span class="text-green-600 font-bold text-base md:text-lg"
+                  >₹80</span
+                >
+                <span class="text-gray-400 line-through text-xs md:text-sm ml-2"
+                  >₹100</span
+                >
+              </div>
+
+              <button
+                class="flex h-8 w-10 items-center justify-center rounded-md bg-orange-300 hover:bg-orange-400 transition"
+              >
+                <img
+                  src="./assets/img/cart_increment.svg"
+                  alt="increment"
+                  class="h-4 w-4"
+                />
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white relative rounded-md shadow-sm p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+          >
+            <div class="flex items-center gap-4 w-full">
+              <img
+                src="./assets/img/product_12.jpg"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+              <img
+                src="./assets/img/love.png"
+                alt=""
+                class="h-4 w-4 absolute top-2 left-2"
+              />
+
+              <h3 class="font-semibold text-gray-800 text-sm md:text-base">
+                Organic Fresh Apples
+              </h3>
+            </div>
+
+            <div class="flex gap-2 items-center md:justify-center w-full">
+              <span class="bg-green-500 text-white px-2 py-1 rounded text-xs"
+                >1 KG</span
+              >
+              <span class="border px-2 py-1 rounded text-xs">2 KG</span>
+              <span class="border px-2 py-1 rounded text-xs">3 KG</span>
+            </div>
+
+            <div
+              class="flex items-center justify-between md:justify-end gap-8 w-full"
+            >
+              <div>
+                <span class="text-green-600 font-bold text-base md:text-lg"
+                  >₹80</span
+                >
+                <span class="text-gray-400 line-through text-xs md:text-sm ml-2"
+                  >₹100</span
+                >
+              </div>
+
+              <button
+                class="flex h-8 w-10 items-center justify-center rounded-md bg-orange-300 hover:bg-orange-400 transition"
+              >
+                <img
+                  src="./assets/img/cart_increment.svg"
+                  alt="increment"
+                  class="h-4 w-4"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="hidden max-w-7xl mx-auto px-4 py-32 text-center">
+        <div
+          class="inline-flex items-center justify-center w-32 h-32 bg-green-50 text-green-500 rounded-full mb-8 shadow-inner animate-pulse"
+        >
+          <i class="far fa-heart text-5xl"></i>
+        </div>
+        <h2 class="text-4xl font-black text-gray-900 mb-4 tracking-tight">
+          Your wishlist is empty
+        </h2>
+        <p class="text-gray-500 mb-10 max-w-md mx-auto text-lg leading-relaxed">
+          Save your favorite grocery items and they'll appear here for easy
+          shopping!
+        </p>
+        <a
+          href="index.html"
+          class="inline-flex items-center justify-center bg-green-500 text-white px-10 py-5 rounded-3xl font-black text-sm uppercase tracking-widest hover:bg-green-600 hover:-translate-y-1 transition-all shadow-xl shadow-green-200"
+        >
+          Start Discovering
+        </a>
+      </div> -->
+
+    <footer
+      class="bg-gray-900 text-gray-300 pt-24 pb-12 border-t border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+          <div class="col-span-1 md:col-span-1">
+            <img src="./assets/img/logo1.png" alt="" class="w-40 mb-8" />
+            <p class="text-sm leading-8 text-gray-400 font-medium">
+              Elevating your grocery experience with fresh picks delivered to
+              your door with love and care.
+            </p>
+            <div class="flex gap-4 mt-8">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-green-500 transition-all hover:-translate-y-1"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-green-500 transition-all hover:-translate-y-1"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-green-500 transition-all hover:-translate-y-1"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h3
+              class="text-white font-black text-sm uppercase tracking-widest mb-8"
+            >
+              Shopping
+            </h3>
+            <ul class="space-y-4 text-sm font-medium">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Produce</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Dairy & Eggs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Bakery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Beverages</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="text-white font-black text-sm uppercase tracking-widest mb-8"
+            >
+              Support
+            </h3>
+            <ul class="space-y-4 text-sm font-medium">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Track Order</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Returns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 transition ml-0 hover:ml-2 duration-300"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="text-white font-black text-sm uppercase tracking-widest mb-8"
+            >
+              Newsletter
+            </h3>
+            <p class="text-sm text-gray-400 mb-6 font-medium">
+              Stay updated with fresh offers.
+            </p>
+            <div
+              class="flex bg-white/5 p-2 rounded-2xl focus-within:bg-white/10 transition-all"
+            >
+              <input
+                type="email"
+                placeholder="Email address"
+                class="w-full bg-transparent px-4 py-2 text-white border-none focus:ring-0 text-sm"
+              />
+              <button
+                class="bg-green-500 px-4 py-2 rounded-xl text-white hover:bg-green-600 transition-all"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/5 mt-20 pt-10 text-center text-xs text-gray-500 font-bold uppercase tracking-widest"
+        >
+          &copy; 2026 GROCA ECOMMERCE. CRAFTED WITH PASSION.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // View Toggles
+      const gridBtn = document.getElementById("grid-view-btn");
+      const listBtn = document.getElementById("list-view-btn");
+      const main = document.querySelector("main");
+
+      gridBtn.addEventListener("click", () => {
+        main.classList.remove("list-view-active");
+        gridBtn.classList.add("active");
+        listBtn.classList.remove("active");
+        listBtn.classList.remove("text-green-600");
+        listBtn.classList.add("text-gray-500");
+        wishlist_container.classList.remove("list");
+      });
+
+      listBtn.addEventListener("click", () => {
+        main.classList.add("list-view-active");
+        listBtn.classList.add("active");
+        listBtn.classList.remove("text-gray-500");
+        gridBtn.classList.remove("active");
+        wishlist_container.classList.add("list");
+      });
+
+      // Mobile Menu
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      });
+    </script>
+  </body>
+</html>

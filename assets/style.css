@@ -1,0 +1,24 @@
+.bg_image {
+  background:
+    linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)),
+    url("./img/hero-img.jpg");
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Contact page section */
+.bg_image_contact {
+  background-image: url("./img/bg-1.jpg");
+  object-fit: contain;
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Website</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-white shadow-md sticky top-0 z-40 md:px-5 px-2">
+      <div class="mx-auto flex items-center justify-between p-4">
+        <div class="w-100">
+          <img src="./assets/img/logo1.png" alt="Grocery" class="h-8" />
+        </div>
+
+        <nav class="hidden md:flex gap-7 font-medium text-gray-700">
+          <a href="index.html" class="hover:text-green-400 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <a href="./whilist.html">
+            <button
+              class="bg-orange-100 text-green-600 px-3 py-2 rounded-md transition flex items-center"
+            >
+              <img src="./assets/img/love.png" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <a href="./cart.html">
+            <button
+              class="bg-green-100 text-green-600 px-3 py-2 rounded-md hover:bg-green-200 transition flex items-center"
+            >
+              <img src="./assets/img/cart.svg" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <a href="./profile.html" class="flex items-center focus:outline-none">
+            <img
+              src="./assets/img/profile.webp"
+              class="w-9 h-9 rounded-md border-2 border-orange-100"
+            />
+          </a>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden text-gray-700 focus:outline-none"
+            id="mobile-menu-btn"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden" id="mobile-menu" style="display: none">
+        <nav
+          class="flex flex-col bg-white px-4 py-2 gap-2 font-medium text-gray-700"
+        >
+          <a href="#" class="hover:text-green-500 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+          <button
+            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
+          >
+            Login
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto py-3 px-2 md:px-6 grid lg:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl shadow p-6">
+        <h2 class="text-xl font-semibold border-b pb-3 mb-6">Order Summary</h2>
+
+        <div class="flex items-center justify-between mb-5">
+          <div class="flex gap-4 items-center">
+            <img
+              src="./assets/img/product_12.jpg"
+              class="w-16 h-16 rounded-md"
+            />
+            <div>
+              <p class="font-medium">Armchair</p>
+              <p class="text-sm text-gray-500">Light Single Chair</p>
+            </div>
+          </div>
+          <p class="font-semibold">$149</p>
+        </div>
+
+        <div class="flex items-center justify-between mb-5">
+          <div class="flex gap-4 items-center">
+            <img
+              src="./assets/img/product_8.jpg"
+              class="w-16 h-16 rounded-md"
+            />
+            <div>
+              <p class="font-medium">Minimal Sofa</p>
+              <p class="text-sm text-gray-500">Light Single Chair</p>
+            </div>
+          </div>
+          <p class="font-semibold">$199</p>
+        </div>
+
+        <div class="flex items-center justify-between mb-5">
+          <div class="flex gap-4 items-center">
+            <img
+              src="./assets/img/product_6.png"
+              class="w-16 h-16 rounded-md"
+            />
+            <div>
+              <p class="font-medium">Dining Chair</p>
+              <p class="text-sm text-gray-500">Light Single Chair</p>
+            </div>
+          </div>
+          <p class="font-semibold">$79</p>
+        </div>
+
+        <div class="mt-6">
+          <p class="text-sm mb-2 text-gray-600">Do You Have Promotion Code ?</p>
+
+          <div class="flex items-center gap-2">
+            <input
+              type="text"
+              placeholder="Enter your coupon code"
+              class="flex-1 border rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-orange-400"
+            />
+
+            <button
+              class="bg-orange-500 text-white rounded-md py-2 px-3 text-md text-center"
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col gap-2 text-sm">
+          <div class="flex justify-between px-3">
+            <p>Sub Total</p>
+            <p>$427</p>
+          </div>
+
+          <div class="flex justify-between px-3">
+            <p>Delivery Charge</p>
+            <p>$30</p>
+          </div>
+          <div class="flex justify-between px-3">
+            <p>Discount</p>
+            <p>$30</p>
+          </div>
+
+          <div
+            class="flex justify-between bg-green-100 px-3 py-3 rounded-md font-semibold"
+          >
+            <p>Total</p>
+            <p>$457</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-6">
+        <h2 class="text-xl font-semibold border-b pb-3 mb-6">
+          Select Payment Method
+        </h2>
+
+        <div class="flex flex-wrap gap-3 mb-3">
+          <button class="border px-4 py-2 rounded-lg flex items-center gap-2">
+            <img src="https://img.icons8.com/color/24/google-pay.png" />
+            GPay
+          </button>
+
+          <button class="border px-4 py-2 rounded-lg flex items-center gap-2">
+            <img src="https://img.icons8.com/ios-filled/24/mac-os.png" />
+            Apple Pay
+          </button>
+
+          <button class="border px-4 py-2 rounded-lg flex items-center gap-2">
+            <img src="https://img.icons8.com/color/24/paypal.png" />
+            PayPal
+          </button>
+
+          <button class="border px-4 py-2 rounded-lg flex items-center gap-2">
+            <img src="https://img.icons8.com/color/24/visa.png" />
+            Visa
+          </button>
+        </div>
+
+        <div class="mb-2">
+          <label class="text-sm">Card Number</label>
+          <input
+            type="text"
+            placeholder="1234 1234 1234 1234"
+            class="w-full border rounded-lg px-4 py-2 mt-3 focus:ring-1 focus:ring-orange-400 outline-none"
+          />
+        </div>
+
+        <div class="mb-2">
+          <label class="text-sm">Card Holder</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="w-full border rounded-lg px-4 py-2 mt-3 focus:ring-1 focus:ring-orange-400 outline-none"
+          />
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-2">
+          <div>
+            <label class="text-sm">Expired Date</label>
+            <input
+              type="text"
+              placeholder="12/25"
+              class="w-full border rounded-lg px-4 py-2 mt-3 focus:ring-1 focus:ring-orange-400 outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="text-sm">CVV</label>
+            <input
+              type="text"
+              placeholder="123"
+              class="w-full border rounded-lg px-4 py-2 mt-3 focus:ring-1 focus:ring-orange-400 outline-none"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="text-sm">Address</label>
+          <input
+            type="text"
+            placeholder="Enter your address"
+            class="w-full border rounded-lg px-4 py-2 mt-3 focus:ring-1 focus:ring-orange-400 outline-none"
+          />
+        </div>
+
+        <div class="flex items-center gap-2 mb-4">
+          <input
+            type="checkbox"
+            class="select_box border border-orange-200 accent-orange-300"
+          />
+          <label class="text-sm">Save Card For Future Payments</label>
+        </div>
+
+        <button
+          class="w-full bg-orange-500 text-white py-2 text-lg hover:opacity-90"
+        >
+          Pay $457
+        </button>
+
+        <p
+          class="text-center text-sm mt-4 border py-2 border-green-400 text-gray-500 cursor-pointer"
+        >
+          Back To Cart
+        </p>
+      </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-300 pt-14 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center mb-2">
+              <img
+                src="./assets/img/logo1.png"
+                alt=""
+                class="w-40 object-cover"
+              />
+            </div>
+            <p class="text-sm leading-6">
+              Fresh vegetables, fruits & daily groceries delivered at your
+              doorstep with best quality and affordable prices.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-4 mt-5">
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/instagram.svg"
+                  alt="instagram"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/facebook.svg"
+                  alt="facebook"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/youtube.svg"
+                  alt="youtube"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="index.html" class="hover:text-green-400 transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400 transition">Shop</a>
+              </li>
+              <li>
+                <a href="./offer.html" class="hover:text-green-400 transition"
+                  >Offers</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="hover:text-green-400 transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400 transition">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Categories</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-green-400 transition"
+                  >Vegetables</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400 transition">Fruits</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400 transition">Dairy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400 transition"
+                  >Beverages</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400 transition">Snacks</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Subscribe</h3>
+            <p class="text-sm mb-4">Get updates about offers and discounts.</p>
+
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="w-full px-3 py-2 rounded-l-lg text-black focus:outline-none"
+              />
+              <button
+                class="bg-green-500 px-4 rounded-r-lg text-white hover:bg-green-600 transition"
+              >
+                <img
+                  src="./assets/img/right_arrow.svg"
+                  alt="6"
+                  class="w-8 h-8 text-white invert brightness-0"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400"
+        >
+          © 2026 Groca. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  </body>
+</html>

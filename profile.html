@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account | Groca Grocery Store</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #8bcc49;
+        --primary-dark: #8bcc49;
+        --secondary: #f97316;
+      }
+      .sidebar-link.active {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        color: white;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+      }
+      .sidebar-link:hover:not(.active) {
+        background-color: #f0fdf4;
+        color: var(--primary);
+      }
+      .stat-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+      }
+      .gradient-banner {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      }
+      .referral-card {
+        background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        border: 1px dashed #f59e0b;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40 md:px-5 px-2">
+      <div class="mx-auto flex items-center justify-between p-4">
+        <div class="w-100">
+          <img src="./assets/img/logo1.png" alt="Grocery" class="h-8" />
+        </div>
+
+        <nav class="hidden md:flex gap-7 font-medium text-gray-700">
+          <a href="index.html" class="hover:text-green-400 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <a href="./whilist.html">
+            <button
+              class="bg-orange-100 text-green-600 px-3 py-2 rounded-md transition flex items-center"
+            >
+              <img src="./assets/img/love.png" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <a href="./cart.html">
+            <button
+              class="bg-green-100 text-green-600 px-3 py-2 rounded-md hover:bg-green-200 transition flex items-center"
+            >
+              <img src="./assets/img/cart.svg" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <button
+            class="hidden md:inline-block bg-green-500 text-white px-4 rounded-md hover:bg-green-600 transition h-8 flex justify-center items-center text-center"
+          >
+            Login
+          </button>
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden text-gray-700 focus:outline-none"
+            id="mobile-menu-btn"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden" id="mobile-menu" style="display: none">
+        <nav
+          class="flex flex-col bg-white px-4 py-2 gap-2 font-medium text-gray-700"
+        >
+          <a href="#" class="hover:text-green-500 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+          <button
+            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
+          >
+            Login
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto px-2 md:px-9 py-5">
+      <div class="flex flex-col lg:flex-row gap-4">
+        <!-- Perfect Premium Sidebar -->
+        <aside class="w-full lg:w-72">
+          <div
+            class="bg-white rounded-md border border-slate-100 shadow-sm sticky top-20 overflow-hidden"
+          >
+            <!-- Profile Section: Elegant & Compact -->
+            <div class="p-2 border-b border-slate-50">
+              <div class="flex items-center gap-4">
+                <div class="relative shrink-0">
+                  <img
+                    src="./assets/img/profile.webp"
+                    alt="Avatar"
+                    class="w-10 h-10 rounded-md object-cover ring-4 ring-white shadow-md"
+                  />
+                  <div
+                    class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"
+                  ></div>
+                </div>
+                <div class="overflow-hidden">
+                  <h2 class="text-lg font-medium text-slate-800 truncate">
+                    Luna
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation: Clean & Spaced -->
+            <nav class="p-2 space-y-1">
+              <a
+                href="#"
+                class="flex items-center gap-3.5 px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium bg-green-600 text-white shadow-lg shadow-green-100"
+              >
+                <i class="fa-solid fa-grid-2 text-base"></i>
+                Dashboard
+              </a>
+
+              <a
+                href="#"
+                class="flex items-center gap-3.5 px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-green-600 group"
+              >
+                <i
+                  class="fa-solid fa-box text-base opacity-40 group-hover:opacity-100 transition-opacity"
+                ></i>
+                Order History
+                <span
+                  class="ml-auto text-[10px] bg-slate-100 px-2 py-0.5 rounded-md text-slate-500 group-hover:bg-green-100 group-hover:text-green-600 transition-colors"
+                  >12</span
+                >
+              </a>
+
+              <a
+                href="#"
+                class="flex items-center gap-3.5 px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-green-600 group"
+              >
+                <i
+                  class="fa-solid fa-heart text-base opacity-40 group-hover:opacity-100 transition-opacity"
+                ></i>
+                My Wishlist
+              </a>
+
+              <a
+                href="#"
+                class="flex items-center gap-3.5 px-4 py-2 rounded-mdl transition-all duration-300 text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-green-600 group"
+              >
+                <i
+                  class="fa-solid fa-map-location text-base opacity-40 group-hover:opacity-100 transition-opacity"
+                ></i>
+                Saved Addresses
+              </a>
+
+              <div class="h-px bg-slate-50 mx-4 my-3"></div>
+
+              <a
+                href="#"
+                class="flex items-center gap-3.5 px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-green-600 group"
+              >
+                <i
+                  class="fa fa-user text-base opacity-40 group-hover:opacity-100 transition-opacity"
+                ></i>
+                Account Security
+              </a>
+
+              <a
+                href="#"
+                class="flex items-center gap-3.5 px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium text-rose-400 hover:bg-rose-50 hover:text-rose-600 group !mt-4"
+              >
+                <i
+                  class="fa-solid fa-power-off text-base opacity-50 group-hover:opacity-100"
+                ></i>
+                Logout Account
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="flex-1 space-y-4">
+          <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div
+              class="stat-card bg-green-100 p-5 rounded-md border border-green-700 cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-green-50 rounded-md flex items-center justify-center text-green-600 text-xl"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-xs text-green-600 font-semibold uppercase tracking-wider"
+                  >
+                    Total Orders
+                  </p>
+                  <p class="text-md font-semibold text-green-600">128</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="stat-card bg-amber-100 p-5 rounded-md border border-amber-600 cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-amber-50 rounded-md flex items-center justify-center text-amber-600 text-xl"
+                >
+                  <i class="fa-solid fa-coins"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-sm text-amber-600 font-semibold font-semibold uppercase"
+                  >
+                    Groca Coins
+                  </p>
+                  <p class="text-md font-semibold text-amber-600">4,250</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="stat-card bg-indigo-100 p-5 rounded-md border border-indigo-600 cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-indigo-50 rounded-md flex items-center justify-center text-indigo-600 text-xl"
+                >
+                  <i class="fa-solid fa-truck"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-indigo-600 font-semibold uppercase">
+                    In Transit
+                  </p>
+                  <p class="text-md font-semibold text-indigo-500">02</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="stat-card bg-rose-100 p-5 rounded-md border border-rose-600 cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-rose-50 rounded-md flex items-center justify-center text-rose-600 text-xl"
+                >
+                  <i class="fa-solid fa-ticket"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-rose-600 font-semibold uppercase">
+                    Active Coupons
+                  </p>
+                  <p class="text-md font-semibold text-rose-700">05</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="referral-card p-6 rounded-md flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden relative"
+          >
+            <div class="relative z-10 text-center md:text-left">
+              <h3 class="text-md font-semibold text-amber-700">
+                Refer & Earn ₹500!
+              </h3>
+              <p class="text-amber-600 text-sm font-medium mt-1">
+                Share your link with friends and get groceries for free.
+              </p>
+              <div
+                class="mt-4 flex items-center gap-2 bg-white/80 backdrop-blur p-1 rounded-md border border-amber-200 w-fit mx-auto md:mx-0"
+              >
+                <code class="px-4 py-1 text-amber-700 font-bold"
+                  >GROCA-REF-99</code
+                >
+                <button
+                  class="bg-amber-500 text-white px-4 py-2 rounded-md text-xs font-bold hover:bg-amber-600 transition shadow-lg shadow-amber-200"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+              </div>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=200"
+              alt="Referral"
+              class="w-32 h-32 object-cover rounded-2xl shadow-xl transform rotate-3"
+            />
+            <div
+              class="absolute -right-10 -top-10 w-40 h-40 bg-amber-200/50 rounded-full blur-3xl"
+            ></div>
+          </div>
+
+          <!-- Tabs for Details -->
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <!-- Section: Profile Info -->
+            <div
+              class="bg-white rounded-md shadow-sm border border-slate-100 overflow-hidden"
+            >
+              <div
+                class="px-4 py-6 border-b border-slate-50 flex items-center justify-between bg-white sticky top-0 z-10"
+              >
+                <h3 class="font-semibold text-lg flex items-center gap-3">
+                  <i class="fa-solid fa-id-card text-green-500"></i> Account
+                  Details
+                </h3>
+                <button
+                  class="text-green-600 bg-green-50 px-3 py-1.5 rounded-md text-xs font-semibold hover:bg-green-100 transition"
+                >
+                  Edit Profile
+                </button>
+              </div>
+              <div class="p-8 space-y-6">
+                <div class="grid grid-cols-2 gap-1">
+                  <div class="space-y-1">
+                    <label
+                      class="text-[10px] font-semibold text-orange-400 uppercase"
+                      >Full Name</label
+                    >
+                    <p class="text-sm font-mono text-slate-800">
+                      Johnathan Doe
+                    </p>
+                  </div>
+                  <div class="space-y-1">
+                    <label
+                      class="text-[10px] font-semibold text-orange-400 uppercase"
+                      >Email</label
+                    >
+                    <p class="text-sm font-mono text-slate-800">
+                      johndoe@example.com
+                    </p>
+                  </div>
+                  <div class="space-y-1">
+                    <label
+                      class="text-[10px] font-semibold text-orange-400 uppercase"
+                      >Phone</label
+                    >
+                    <p class="text-sm font-mono text-slate-800">
+                      +91 98765 43210
+                    </p>
+                  </div>
+                  <div class="space-y-1">
+                    <label
+                      class="text-[10px] font-semibold text-orange-400 uppercase"
+                      >Birthday</label
+                    >
+                    <p class="text-sm font-mono text-slate-800">14 Oct 1992</p>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-50">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="text-sm font-semibold text-orange-400">
+                        Preferred Language
+                      </p>
+                      <p class="text-xs font-mono text-slate-800">
+                        English (US)
+                      </p>
+                    </div>
+                    <button class="text-slate-400 hover:text-slate-600">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section: Saved Addresses -->
+            <div
+              class="bg-white rounded-md shadow-sm border border-slate-100 overflow-hidden"
+            >
+              <div
+                class="px-8 py-6 border-b border-slate-50 flex items-center justify-between"
+              >
+                <h3 class="font-semibold text-lg flex items-center gap-3">
+                  <i class="fa-solid fa-location-dot text-rose-500"></i> Saved
+                  Addresses
+                </h3>
+                <button class="text-green-600 text-xs font-semibold">
+                  + Add New
+                </button>
+              </div>
+              <div class="p-8 space-y-4">
+                <div
+                  class="p-4 rounded-md border-2 border-green-500 bg-green-50/100 relative"
+                >
+                  <span
+                    class="absolute top-4 right-4 bg-green-500 text-white text-[8px] font-semibold px-2 py-1 rounded-md"
+                    >Default</span
+                  >
+                  <p
+                    class="text-xs font-semibold text-slate-800 flex items-center gap-2"
+                  >
+                    <i class="fa-solid fa-house text-slate-400"></i> Home
+                  </p>
+                  <p class="text-[11px] text-slate-500 mt-2 leading-relaxed">
+                    Apt 4B, Green Valley Residency, MK Road,<br />Bangalore,
+                    Karnataka - 560001
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-md border-2 border-slate-50 hover:border-slate-100 transition group cursor-pointer"
+                >
+                  <p
+                    class="text-xs font-semibold text-slate-800 flex items-center justify-between"
+                  >
+                    <span class="flex items-center gap-2"
+                      ><i class="fa-solid fa-briefcase text-slate-400"></i>
+                      Work</span
+                    >
+                    <i
+                      class="fa-solid fa-ellipsis-vertical text-slate-300 group-hover:text-slate-500 transition"
+                    ></i>
+                  </p>
+                  <p class="text-[11px] text-slate-500 mt-2">
+                    Tech Park South, Level 12, Indiranagar,<br />Bangalore -
+                    560038
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section: Orders & Payments -->
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <!-- Recent Orders -->
+            <div
+              class="bg-white rounded-md shadow-sm border border-slate-100 overflow-hidden"
+            >
+              <div
+                class="px-8 py-6 border-b border-slate-50 flex items-center justify-between"
+              >
+                <h3 class="font-semibold text-lg">Recent Orders</h3>
+                <a href="#" class="text-green-600 text-xs font-semibold"
+                  >View History</a
+                >
+              </div>
+              <div class="divide-y divide-slate-50">
+                <div
+                  class="p-6 flex items-center gap-4 hover:bg-slate-50 transition cursor-pointer"
+                >
+                  <div
+                    class="w-14 h-14 bg-orange-100 rounded-md flex items-center justify-center p-2"
+                  >
+                    <img src="./assets/img/product_12.jpg" class="max-h-full" />
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold">Organic Apple Box</p>
+                    <p class="text-[10px] text-slate-400">
+                      Order #GR8829 • 24 Feb, 2024
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-sm font-semibold text-green-600">₹450.00</p>
+                    <span
+                      class="text-[9px] bg-green-100 text-green-700 px-2 py-1 rounded-md font-semibold"
+                      >Delivered</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-6 flex items-center gap-4 hover:bg-slate-50 transition cursor-pointer"
+                >
+                  <div
+                    class="w-14 h-14 bg-orange-100 rounded-md flex items-center justify-center p-2"
+                  >
+                    <img
+                      src="./assets/img/product_11.jpg"
+                      class="max-h-full rounded"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold">Fresh Avocado Pack</p>
+                    <p class="text-[10px] text-slate-400">
+                      Order #GR8710 • 18 Feb, 2024
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-sm font-semibold text-green-600">₹290.00</p>
+                    <span
+                      class="text-[9px] bg-blue-100 text-blue-700 px-2 rounded-md py-1 font-semibold"
+                      >Shipped</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div
+              class="bg-white rounded-md shadow-sm border border-slate-100 overflow-hidden"
+            >
+              <div
+                class="px-8 py-6 border-b border-slate-50 flex items-center justify-between"
+              >
+                <h3 class="font-semibold text-lg flex items-center gap-3">
+                  <i class="fa-solid fa-wallet text-indigo-500"></i> Payments
+                </h3>
+              </div>
+              <div class="p-8 space-y-4">
+                <div
+                  class="bg-slate-900 rounded-md p-6 text-white relative overflow-hidden group transition hover:scale-[1.02] duration-500"
+                >
+                  <div
+                    class="relative z-10 flex flex-col h-full justify-between gap-8"
+                  >
+                    <div class="flex justify-between items-start">
+                      <i class="fa-brands fa-cc-visa text-3xl"></i>
+                      <span
+                        class="text-[10px] font-semibold px-2 py-0.5 bg-white/20 rounded"
+                        >GOLD MEMBER CARD</span
+                      >
+                    </div>
+                    <div>
+                      <p class="text-lg font-mono tracking-widest">
+                        **** **** **** 4242
+                      </p>
+                      <div class="flex justify-between items-end mt-4">
+                        <div>
+                          <p class="text-[8px] uppercase opacity-60">
+                            Card Holder
+                          </p>
+                          <p
+                            class="text-xs font-semibold uppercase tracking-widest"
+                          >
+                            JOHN DOE
+                          </p>
+                        </div>
+                        <div>
+                          <p class="text-[8px] uppercase opacity-60">Expires</p>
+                          <p class="text-xs font-semibold">12/28</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute -right-10 -bottom-10 w-32 h-32 bg-indigo-500/20 rounded-full blur-2xl group-hover:bg-indigo-300/30 transition duration-500"
+                  ></div>
+                  <div
+                    class="absolute -left-10 -top-10 w-32 h-32 bg-rose-500/10 rounded-full blur-2xl"
+                  ></div>
+                </div>
+                <button
+                  class="w-full flex items-center justify-center gap-2 py-4 border-2 border-dashed border-slate-200 rounded-md hover:bg-slate-50 transition text-slate-400 font-semibold text-xs"
+                >
+                  <i class="fa-solid fa-plus-circle"></i> Add New Payment Method
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer Section start -->
+    <footer class="bg-gray-900 text-gray-300 pt-14 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center mb-2">
+              <img
+                src="./assets/img/logo1.png"
+                alt=""
+                class="w-40 object-cover"
+              />
+            </div>
+            <p class="text-sm leading-6">
+              Fresh vegetables, fruits & daily groceries delivered at your
+              doorstep with best quality and affordable prices.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-4 mt-5">
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/instagram.svg"
+                  alt="instagram"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/facebook.svg"
+                  alt="facebook"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/youtube.svg"
+                  alt="youtube"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 justify-between">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="index.html" class="hover:text-green-400 transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <!-- <a href="#" class="hover:text-green-400 transition">Shop</a> -->
+                </li>
+                <li>
+                  <a href="./offer.html" class="hover:text-green-400 transition"
+                    >Offers</a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="hover:text-green-400 transition"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="hover:text-green-400 transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Categories -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Categories</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="#" class="hover:text-green-400 transition"
+                    >Vegetables</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400 transition">Fruits</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400 transition">Dairy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400 transition"
+                    >Beverages</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400 transition">Snacks</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Subscribe</h3>
+            <p class="text-sm mb-4">Get updates about offers and discounts.</p>
+
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="w-full px-3 py-2 rounded-l-lg text-black focus:outline-none"
+              />
+              <button
+                class="bg-green-500 px-4 rounded-r-lg text-white hover:bg-green-600 transition"
+              >
+                <img
+                  src="./assets/img/right_arrow.svg"
+                  alt="6"
+                  class="w-8 h-8 text-white invert brightness-0"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400"
+        >
+          © 2026 Groca. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- footer Section end -->
+    <script>
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  </body>
+</html>
