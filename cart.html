@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <!-- ==================== Header start ======================= -->
     <header class="bg-white shadow-md sticky top-0 z-40 md:px-5 px-2">
       <div class="mx-auto flex items-center justify-between p-4">
         <div class="w-100">
@@ -86,7 +87,9 @@
         <nav
           class="flex flex-col bg-white px-4 py-2 gap-2 font-medium text-gray-700"
         >
-          <a href="#" class="hover:text-green-500 transition">Home</a>
+          <a href="./index.html" class="hover:text-green-500 transition"
+            >Home</a
+          >
           <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
           <a href="./offer.html" class="hover:text-green-500 transition"
             >Offers</a
@@ -97,16 +100,21 @@
           <a href="./contact.html" class="hover:text-green-500 transition"
             >Contact</a
           >
-          <button
-            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
-          >
-            Login
-          </button>
+          <!-- <a href="./login.html">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
+            >
+              Login
+            </button>
+          </a> -->
         </nav>
       </div>
     </header>
+    <!-- ==================== Header end ======================= -->
+
     <section class="px-2 md:px-9 py-5">
       <div class="grid lg:grid-cols-3 gap-8">
+        <!-- ======================= product list start ================== -->
         <div class="lg:col-span-2 space-y-6">
           <!-- Cart Item 1 -->
           <div
@@ -125,12 +133,14 @@
 
               <div class="space-y-2">
                 <div class="flex justify-between items-start">
-                  <h3 class="font-semibold text-lg text-gray-900">
+                  <h3 class="font-semibold text-md text-gray-900">
                     Fresh Bell Pepper
                   </h3>
 
-                  <div class="text-right">
-                    <span class="text-xl font-bold text-green-600">₹120</span>
+                  <div class="text-right flex gap-2 items-center">
+                    <span class="text-md font-semibold text-green-600"
+                      >₹120</span
+                    >
                     <p class="text-xs text-gray-400 line-through">₹150</p>
                   </div>
                 </div>
@@ -185,55 +195,75 @@
 
           <!-- Add -->
         </div>
+        <!-- ======================= product list end ==================== -->
 
-        <!-- Apply Coupon -->
-
-        <!-- Order Summary Section -->
+        <!--  ====================== Order Summary Section =============== -->
         <div class="lg:col-span-1">
+          <!--  ================ Delivery Address start============  -->
           <div
-            class="bg-white shadow-sm rounded-md px-4 py-2 border border-orange-200 mb-3"
+            class="bg-white rounded-md border border-orange-100 p-3 mb-2 shadow-sm"
           >
-            <div class="text-sm text-gray-600 space-y-1">
-              <p class="font-medium text-gray-800">John</p>
-              <p>12/4 Anna Street</p>
-              <p>Chennai, Tamil Nadu - 600017</p>
-              <p class="mt-2">
-                <span class="font-medium text-gray-700">Phone:</span> +91 98765
-                43210
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-md font-semibold text-gray-700"
+                >Delivery Address</span
+              >
+              <i
+                class="fa-regular fa-pen-to-square text-orange-400 text-xs cursor-pointer"
+              ></i>
+            </div>
+            <div class="h-[1px] bg-gray-100 w-full"></div>
+            <div class="text-sm text-gray-500 mt-2 space-y-0.5">
+              <p class="font-medium text-gray-800 text-sm">John</p>
+              <p>12/4 Anna Street, West Mambalam</p>
+              <p>Chennai - 600017</p>
+              <p class="text-sm pt-0.5">
+                Ph:
+                <span class="text-gray-600 font-medium">+91 98765 43210</span>
               </p>
             </div>
           </div>
-          <div class="rounded-md shadow-sm border border-orange-200 px-4 py-2">
-            <h3 class="text-lg font-semibold mb-4 text-gray-900">
-              Order Summary
-            </h3>
-            <div class="flex justify-between items-center mb-4">
-              <span>Subtotal</span>
-              <span>₹300</span>
-            </div>
-            <div class="flex justify-between items-center mb-4">
-              <span>Shipping</span>
-              <span>₹10</span>
-            </div>
-            <div class="flex justify-between items-center mb-4">
-              <span>Tax</span>
-              <span>₹5</span>
-            </div>
-            <div class="flex justify-between items-center mb-4">
-              <span>Total</span>
-              <span>₹315</span>
-            </div>
-            <a href="./checkout.html">
-              <button
-                class="w-full bg-green-600 text-white font-medium py-2 mt-4 rounded-md hover:bg-green-700 transition-colors"
+          <!--  ================ Delivery Address end============  -->
+          <!--  ============= Order Summary start  ======================-->
+          <div
+            class="bg-white rounded-md border border-orange-100 p-3 shadow-sm"
+          >
+            <span class="text-md font-semibold text-gray-700 block mb-1"
+              >Order Summary</span
+            >
+            <div class="h-[1.5px] bg-gray-100 w-full"></div>
+            <div class="mt-2 space-y-1.5">
+              <div class="flex justify-between text-sm text-gray-500">
+                <span>Subtotal</span>
+                <span class="text-gray-700">₹300</span>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500">
+                <span>Shipping</span>
+                <span class="text-green-600 font-medium">₹10</span>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500">
+                <span>Tax</span>
+                <span class="text-gray-700">₹5</span>
+              </div>
+              <div
+                class="border-t border-gray-50 pt-1.5 flex justify-between items-center"
               >
-                Proceed to Checkout
-              </button>
-            </a>
+                <span class="text-sm font-semibold text-gray-700">Total</span>
+                <span class="text-sm font-semibold text-green-600">₹315</span>
+              </div>
+              <a href="./checkout.html" class="block pt-1">
+                <button
+                  class="w-full bg-green-500 text-white text-sm font-medium py-2 rounded-md transition-colors hover:bg-green-600"
+                >
+                  Proceed to Checkout
+                </button>
+              </a>
+            </div>
           </div>
+          <!--  ============= Order Summary end  ======================-->
         </div>
+        <!--  =========== Order Summary Section =============== -->
       </div>
-
+      <!--  ========= Recently View Product ============= -->
       <div class="mt-16">
         <div class="flex items-center justify-between mb-6">
           <h3 class="text-xl tect font-bold text-orange-400">
@@ -324,11 +354,12 @@
           </div>
         </div>
       </div>
+      <!--  ========= Recently View Product ============= -->
     </section>
 
     <footer class="bg-gray-900 text-gray-300 pt-14 pb-6 mt-16">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           <div>
             <div class="flex items-center mb-2">
               <img
@@ -378,59 +409,82 @@
               </a>
             </div>
           </div>
+          <div class="grid grid-cols-2 justify-between">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="index.html" class="hover:text-green-400 transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <!-- <a href="#" class="hover:text-green-400 transition">Shop</a> -->
+                </li>
+                <li>
+                  <a href="./offer.html" class="hover:text-green-400 transition"
+                    >Offers</a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="hover:text-green-400 transition"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="hover:text-green-400 transition"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a href="./terms.html" class="hover:text-green-400 transition"
+                    >Terms & Conditions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy_policy.html"
+                    class="hover:text-green-400 transition"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
 
-          <!-- Quick Links -->
-          <div>
-            <h3 class="text-white font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a href="index.html" class="hover:text-green-400 transition"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <!-- <a href="#" class="hover:text-green-400 transition">Shop</a> -->
-              </li>
-              <li>
-                <a href="./offer.html" class="hover:text-green-400 transition"
-                  >Offers</a
-                >
-              </li>
-              <li>
-                <a href="./about.html" class="hover:text-green-400 transition"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-400 transition">Contact</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Categories -->
-          <div>
-            <h3 class="text-white font-semibold mb-4">Categories</h3>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a href="#" class="hover:text-green-400 transition"
-                  >Vegetables</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-400 transition">Fruits</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-400 transition">Dairy</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-400 transition"
-                  >Beverages</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-400 transition">Snacks</a>
-              </li>
-            </ul>
+            <!-- Categories -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Categories</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Vegetables</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Fruits</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Dairy</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Beverages</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Snacks</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- Newsletter -->

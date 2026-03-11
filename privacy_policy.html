@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Groca Organic Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #74c224;
+        --primary-dark: #059669;
+        --secondary: #f97316;
+        --accent: #f0fdf4;
+      }
+
+      .mesh-gradient {
+        background:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+          url("./assets/img/banner_terms.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .section-card {
+        transition: all 0.2s ease;
+      }
+
+      .toc-link.active {
+        color: var(--primary);
+        font-weight: 700;
+        background: var(--accent);
+        border-right: 3px solid var(--primary);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 relative overflow-x-hidden min-h-screen text-slate-600"
+  >
+    <!--  ==================== Header start =================== -->
+
+    <header class="bg-white shadow-md sticky top-0 z-40 md:px-5 px-2">
+      <div class="mx-auto flex items-center justify-between p-4">
+        <div class="w-100">
+          <img src="./assets/img/logo1.png" alt="Grocery" class="h-8" />
+        </div>
+
+        <nav class="hidden md:flex gap-7 font-medium text-gray-700">
+          <a href="index.html" class="hover:text-green-400 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <a href="./whilist.html">
+            <button
+              class="bg-orange-100 text-green-600 px-3 py-2 rounded-md transition flex items-center"
+            >
+              <img src="./assets/img/love.png" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <a href="./cart.html">
+            <button
+              class="bg-green-100 text-green-600 px-3 py-2 rounded-md hover:bg-green-200 transition flex items-center"
+            >
+              <img src="./assets/img/cart.svg" alt="cart" class="w-5 h-5" />
+            </button>
+          </a>
+          <a href="./login.html">
+            <button
+              class="hidden md:inline-block bg-green-500 text-white px-4 rounded-md hover:bg-green-600 transition h-8 flex justify-center items-center text-center"
+            >
+              Login
+            </button>
+          </a>
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden text-gray-700 focus:outline-none"
+            id="mobile-menu-btn"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden" id="mobile-menu" style="display: none">
+        <nav
+          class="flex flex-col bg-white px-4 py-2 gap-2 font-medium text-gray-700"
+        >
+          <a href="index.html" class="hover:text-green-500 transition">Home</a>
+          <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
+          <a href="./offer.html" class="hover:text-green-500 transition"
+            >Offers</a
+          >
+          <a href="./about.html" class="hover:text-green-500 transition"
+            >About</a
+          >
+          <a href="./contact.html" class="hover:text-green-500 transition"
+            >Contact</a
+          >
+          <a href="./login.html">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
+            >
+              Login
+            </button>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!--  ==================== Header End =================== -->
+
+    <!-- ==================== Hero Section start ========================= -->
+    <section
+      class="relative py-14 overflow-hidden mesh-gradient border-b border-gray-100 flex items-center justify-center min-h-[160px]"
+    >
+      <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] font-bold tracking-widest mb-4 uppercase border border-white/30"
+        >
+          <i class="fas fa-user-shield"></i>
+          Privacy Center
+        </div>
+        <h1
+          class="text-2xl md:text-3xl font-extrabold text-white mb-2 tracking-tight drop-shadow-md"
+        >
+          Privacy <span class="text-green-400">Policy</span>
+        </h1>
+        <p
+          class="text-gray-100 max-w-lg mx-auto text-[14px] font-medium opacity-90"
+        >
+          Your privacy is our priority. Learn how we handle and protect your
+          personal data at Groca Organic Market.
+        </p>
+      </div>
+    </section>
+    <!-- ==================== Hero Section End ========================= -->
+
+    <!--  =============== Main Content  start =============== -->
+
+    <main class="max-w-7xl mx-auto px-6 py-6">
+      <div class="flex flex-col lg:flex-row gap-4">
+        <!-- Sidebar Navigation -->
+        <aside class="lg:w-1/5 hidden lg:block sticky top-20 self-start">
+          <div class="bg-white rounded-md p-4 border border-gray-100 shadow-sm">
+            <h3
+              class="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2"
+            >
+              <i class="fas fa-list-ul text-green-500"></i>
+              Privacy Topics
+            </h3>
+            <nav class="flex flex-col gap-0.5">
+              <a
+                href="#info-collection"
+                class="toc-link active p-1.5 rounded-md hover:bg-gray-50 text-[12px] text-gray-600 font-semibold transition-all flex items-center gap-2"
+              >
+                <span class="text-[9px] opacity-40">01</span> Data Collection
+              </a>
+              <a
+                href="#data-usage"
+                class="toc-link p-1.5 rounded-md hover:bg-gray-50 text-[12px] text-gray-600 font-semibold transition-all flex items-center gap-2"
+              >
+                <span class="text-[9px] opacity-40">02</span> Data Usage
+              </a>
+              <a
+                href="#cookies-policy"
+                class="toc-link p-1.5 rounded-md hover:bg-gray-50 text-[12px] text-gray-600 font-semibold transition-all flex items-center gap-2"
+              >
+                <span class="text-[9px] opacity-40">03</span> Cookies
+              </a>
+              <a
+                href="#data-protection"
+                class="toc-link p-1.5 rounded-md hover:bg-gray-50 text-[12px] text-gray-600 font-semibold transition-all flex items-center gap-2"
+              >
+                <span class="text-[9px] opacity-40">04</span> Security
+              </a>
+              <a
+                href="#user-rights"
+                class="toc-link p-1.5 rounded-md hover:bg-gray-50 text-[12px] text-gray-600 font-semibold transition-all flex items-center gap-2"
+              >
+                <span class="text-[9px] opacity-40">05</span> Your Rights
+              </a>
+              <a
+                href="#third-parties"
+                class="toc-link p-1.5 rounded-md hover:bg-gray-50 text-[12px] text-gray-600 font-semibold transition-all flex items-center gap-2"
+              >
+                <span class="text-[9px] opacity-40">06</span> Third Parties
+              </a>
+            </nav>
+          </div>
+          <!-- Support Card -->
+          <div
+            class="mt-4 p-4 bg-white border border-gray-100 rounded-md shadow-sm"
+          >
+            <div
+              class="w-8 h-8 bg-green-100 text-green-600 rounded-md flex items-center justify-center mb-3"
+            >
+              <i class="fas fa-headset text-sm"></i>
+            </div>
+            <h4 class="text-[13px] font-semibold text-gray-900 mb-1">
+              Privacy Help
+            </h4>
+            <p class="text-[11px] text-gray-500 mb-4 leading-relaxed">
+              Have questions about your data? Our privacy team is here for you.
+            </p>
+            <a
+              href="./contact.html"
+              class="block w-full py-2 bg-green-500 hover:bg-green-600 text-white text-center text-[11px] font-semibold rounded-md transition-all shadow-sm shadow-green-100"
+            >
+              Contact Support
+            </a>
+          </div>
+        </aside>
+
+        <!-- Privacy Policy Content -->
+        <article class="lg:w-4/5 space-y-4">
+          <!-- Section 01: Information Collection -->
+          <section
+            id="info-collection"
+            class="section-card bg-white rounded-md p-5 border border-gray-100 shadow-sm items-start flex gap-4"
+          >
+            <div
+              class="w-7 h-7 bg-green-50 text-green-500 rounded-md flex-shrink-0 flex items-center justify-center text-xs font-semibold border border-green-500"
+            >
+              01
+            </div>
+            <div>
+              <h2 class="text-md font-semibold text-gray-900 mb-2">
+                Information We Collect
+              </h2>
+              <div class="text-[13px] text-gray-600 space-y-2">
+                <p>
+                  At Groca, we collect information to provide better services to
+                  all our users. This includes:
+                </p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>
+                    <span class="font-semibold">Personal Information:</span>
+                    Name, email address, phone number, and delivery address.
+                  </li>
+                  <li>
+                    <span class="font-semibold">Payment Data:</span> Transaction
+                    details when you make a purchase (handled securely via
+                    encrypted gateways).
+                  </li>
+                  <li>
+                    <span class="font-semibold">Usage Data:</span> Pages
+                    visited, products viewed, and interaction with our platform.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 02: Data Usage -->
+          <section
+            id="data-usage"
+            class="section-card bg-white rounded-md p-5 border border-gray-100 shadow-sm items-start flex gap-4"
+          >
+            <div
+              class="w-7 h-7 bg-green-50 text-green-500 rounded-md flex-shrink-0 flex items-center justify-center text-xs font-semibold border border-green-500"
+            >
+              02
+            </div>
+            <div>
+              <h2 class="text-md font-semibold text-gray-900 mb-2">
+                How We Use Your Data
+              </h2>
+              <div class="text-[13px] text-gray-600 space-y-2">
+                <p>Your information helps us to:</p>
+                <div class="grid md:grid-cols-2 gap-2 mt-2">
+                  <div
+                    class="bg-slate-50 p-2 rounded-md flex gap-2 text-[12px] font-medium border border-gray-100"
+                  >
+                    <i class="fas fa-check text-green-500 mt-0.5"></i>
+                    <span>Process and deliver orders.</span>
+                  </div>
+                  <div
+                    class="bg-slate-50 p-2 rounded-md flex gap-2 text-[12px] font-medium border border-gray-100"
+                  >
+                    <i class="fas fa-check text-green-500 mt-0.5"></i>
+                    <span>Personalize your experience.</span>
+                  </div>
+                  <div
+                    class="bg-slate-50 p-2 rounded-md flex gap-2 text-[12px] font-medium border border-gray-100"
+                  >
+                    <i class="fas fa-check text-green-500 mt-0.5"></i>
+                    <span>Send service updates.</span>
+                  </div>
+                  <div
+                    class="bg-slate-50 p-2 rounded-md flex gap-2 text-[12px] font-medium border border-gray-100"
+                  >
+                    <i class="fas fa-check text-green-500 mt-0.5"></i>
+                    <span>Improve site performance.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 03: Cookies Policy -->
+          <section
+            id="cookies-policy"
+            class="section-card bg-white rounded-md p-5 border border-gray-100 shadow-sm items-start flex gap-4"
+          >
+            <div
+              class="w-7 h-7 bg-green-50 text-green-500 rounded-md flex-shrink-0 flex items-center justify-center text-xs font-semibold border border-green-500"
+            >
+              03
+            </div>
+            <div>
+              <h2 class="text-md font-semibold text-gray-900 mb-2">
+                Cookies & Tracking
+              </h2>
+              <div class="text-[13px] text-gray-600 space-y-2">
+                <p>
+                  We use cookies to enhance your browsing experience. Cookies
+                  are small files stored on your device that help us remember
+                  your preferences and analyze site traffic.
+                </p>
+                <div
+                  class="p-2 bg-blue-50/50 rounded-md border border-blue-100 italic text-[11px]"
+                >
+                  Note: You can disable cookies through your browser settings,
+                  though some site features may not function properly.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 04: Data Protection -->
+          <section
+            id="data-protection"
+            class="section-card bg-white rounded-md p-5 border border-gray-100 shadow-sm items-start flex gap-4"
+          >
+            <div
+              class="w-7 h-7 bg-green-50 text-green-500 rounded-md flex-shrink-0 flex items-center justify-center text-xs font-semibold border border-green-500"
+            >
+              04
+            </div>
+            <div>
+              <h2 class="text-md font-semibold text-gray-900 mb-2">
+                Security & Storage
+              </h2>
+              <div class="text-[13px] text-gray-600 space-y-2">
+                <p>
+                  We implement industry-standard security measures, including
+                  SSL encryption, to protect your personal data from
+                  unauthorized access, disclosure, or alteration.
+                </p>
+                <p>
+                  Data is stored only as long as necessary to provide our
+                  services and comply with legal requirements.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 05: User Rights -->
+          <section
+            id="user-rights"
+            class="section-card bg-white rounded-md p-5 border border-gray-100 shadow-sm items-start flex gap-4"
+          >
+            <div
+              class="w-7 h-7 bg-green-50 text-green-500 rounded-md flex-shrink-0 flex items-center justify-center text-xs font-semibold border border-green-500"
+            >
+              05
+            </div>
+            <div>
+              <h2 class="text-md font-semibold text-gray-900 mb-2">
+                Your Privacy Rights
+              </h2>
+              <div class="text-[13px] text-gray-600 space-y-2">
+                <p>Under privacy laws, you have the right to:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Access and request a copy of your personal data.</li>
+                  <li>Request correction of inaccurate information.</li>
+                  <li>Request deletion of your data from our systems.</li>
+                  <li>Object to processing for marketing purposes.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 06: Third Parties -->
+          <section
+            id="third-parties"
+            class="section-card bg-white rounded-md p-5 border border-gray-100 shadow-sm items-start flex gap-4"
+          >
+            <div
+              class="w-7 h-7 bg-green-50 text-green-500 rounded-md flex-shrink-0 flex items-center justify-center text-xs font-semibold border border-green-500"
+            >
+              06
+            </div>
+            <div>
+              <h2 class="text-md font-semibold text-gray-900 mb-2">
+                Third-Party Sharing
+              </h2>
+              <div class="text-[13px] text-gray-600">
+                <p>
+                  We do not sell your personal data. We only share information
+                  with trusted partners (like delivery services and payment
+                  processors) essential to fulfilling your orders.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Bottom Actions -->
+          <div class="flex items-center justify-end gap-3 py-4">
+            <button
+              class="px-6 py-2 rounded-md bg-white border border-gray-200 text-[11px] font-bold uppercase tracking-widest hover:bg-gray-50 transition-all"
+            >
+              Print Policy
+            </button>
+            <button
+              class="px-6 py-2 rounded-md bg-green-500 text-white font-bold text-[11px] uppercase tracking-widest hover:bg-green-600 transition-all shadow-md"
+            >
+              Acknowledge
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!--  =============== Main Content  start =============== -->
+
+    <!--  ================== Footer section start ===================  -->
+
+    <footer class="bg-gray-900 text-gray-300 pt-14 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center mb-2">
+              <img
+                src="./assets/img/logo1.png"
+                alt=""
+                class="w-40 object-cover"
+              />
+            </div>
+            <p class="text-sm leading-6">
+              Fresh vegetables, fruits & daily groceries delivered at your
+              doorstep with best quality and affordable prices.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-4 mt-5">
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/instagram.svg"
+                  alt="instagram"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/facebook.svg"
+                  alt="facebook"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/youtube.svg"
+                  alt="youtube"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 justify-between">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="index.html" class="hover:text-green-400 transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <!-- <a href="#" class="hover:text-green-400 transition">Shop</a> -->
+                </li>
+                <li>
+                  <a href="./offer.html" class="hover:text-green-400 transition"
+                    >Offers</a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="hover:text-green-400 transition"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="hover:text-green-400 transition"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a href="./terms.html" class="hover:text-green-400 transition"
+                    >Terms & Conditions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy_policy.html"
+                    class="hover:text-green-400 transition"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Categories -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Categories</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Vegetables</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Fruits</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Dairy</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Beverages</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Snacks</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Subscribe</h3>
+            <p class="text-sm mb-4">Get updates about offers and discounts.</p>
+
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="w-full px-3 py-2 rounded-l-lg text-black focus:outline-none"
+              />
+              <button
+                class="bg-green-500 px-4 rounded-r-lg text-white hover:bg-green-600 transition"
+              >
+                <img
+                  src="./assets/img/right_arrow.svg"
+                  alt="6"
+                  class="w-8 h-8 text-white invert brightness-0"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400"
+        >
+          © 2026 Groca. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!--  ================== Footer section End ===================  -->
+    <script>
+      // Mobile menu logic
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.onclick = () => {
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      };
+    </script>
+  </body>
+</html>

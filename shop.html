@@ -45,7 +45,7 @@
     </style>
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans">
-    <!-- Header -->
+    <!-- ==================== Header start ======================= -->
     <header class="bg-white shadow-md sticky top-0 z-40 md:px-5 px-2">
       <div class="mx-auto flex items-center justify-between p-4">
         <div class="w-100">
@@ -116,7 +116,9 @@
         <nav
           class="flex flex-col bg-white px-4 py-2 gap-2 font-medium text-gray-700"
         >
-          <a href="#" class="hover:text-green-500 transition">Home</a>
+          <a href="./index.html" class="hover:text-green-500 transition"
+            >Home</a
+          >
           <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
           <a href="./offer.html" class="hover:text-green-500 transition"
             >Offers</a
@@ -127,24 +129,28 @@
           <a href="./contact.html" class="hover:text-green-500 transition"
             >Contact</a
           >
-          <button
-            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
-          >
-            Login
-          </button>
+          <a href="./login.html">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
+            >
+              Login
+            </button>
+          </a>
         </nav>
       </div>
     </header>
+    <!-- ==================== Header end ======================= -->
 
-    <!-- Header Alert -->
+    <!-- ==================== Header Alert start ======================= -->
     <div class="bg-amber-50 py-1.5 text-center border-b border-amber-100">
       <p class="text-[10px] md:text-xs font-medium text-amber-700">
         ⚡ Flash Sale: Get <span class="text-amber-900 font-bold">50%</span> off
         on all organic fruits today!
       </p>
     </div>
+    <!-- ==================== Header Alert end ======================= -->
 
-    <!-- Main Content -->
+    <!-- ==================== Main Content start ======================= -->
     <main class="max-w-7xl mx-auto px-2 md:px-9 py-6">
       <div class="flex flex-col lg:flex-row gap-3">
         <!-- Filter Sidebar - COMPACT -->
@@ -1175,120 +1181,172 @@
         </div>
       </div>
     </main>
+    <!-- ==================== Main Content end ======================= -->
 
-    <!-- Simple Footer -->
-    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8 mt-16 px-4 md:px-9">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div class="space-y-6">
-          <img src="./assets/img/logo1.png" alt="Groca" class="w-40" />
-          <p class="text-xs leading-relaxed opacity-80">
-            Fresh organic vegetables, fruits & daily essentials delivered at
-            your doorstep with premium quality and affordable prices.
-          </p>
-          <div class="flex gap-4">
-            <a
-              href="#"
-              class="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-green-500 transition"
-              ><i class="fa-brands fa-instagram text-xs text-white"></i
-            ></a>
-            <a
-              href="#"
-              class="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-green-500 transition"
-              ><i class="fa-brands fa-facebook-f text-xs text-white"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 col-span-2 gap-8">
+    <!-- ==================== Footer start ======================= -->
+    <footer class="bg-gray-900 text-gray-300 pt-14 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           <div>
-            <h4
-              class="text-white font-semibold text-sm mb-6 uppercase tracking-wider"
-            >
-              Shopping
-            </h4>
-            <ul class="space-y-3 text-xs">
-              <li>
-                <a href="index.html" class="hover:text-green-500 transition"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a href="shop.html" class="text-green-500 font-bold"
-                  >Main Shop</a
-                >
-              </li>
-              <li>
-                <a href="offer.html" class="hover:text-green-500 transition"
-                  >Latest Offers</a
-                >
-              </li>
-              <li>
-                <a href="contact.html" class="hover:text-green-500 transition"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
+            <div class="flex items-center mb-2">
+              <img
+                src="./assets/img/logo1.png"
+                alt=""
+                class="w-40 object-cover"
+              />
+            </div>
+            <p class="text-sm leading-6">
+              Fresh vegetables, fruits & daily groceries delivered at your
+              doorstep with best quality and affordable prices.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-4 mt-5">
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/instagram.svg"
+                  alt="instagram"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/facebook.svg"
+                  alt="facebook"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="bg-gray-600 p-2 rounded-md hover:bg-green-500 transition"
+              >
+                <img
+                  src="./assets/img/youtube.svg"
+                  alt="youtube"
+                  class="w-4 h-4 text-white invert"
+                />
+              </a>
+            </div>
           </div>
+          <div class="grid grid-cols-2 justify-between">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="index.html" class="hover:text-green-400 transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <!-- <a href="#" class="hover:text-green-400 transition">Shop</a> -->
+                </li>
+                <li>
+                  <a href="./offer.html" class="hover:text-green-400 transition"
+                    >Offers</a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="hover:text-green-400 transition"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="hover:text-green-400 transition"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a href="./terms.html" class="hover:text-green-400 transition"
+                    >Terms & Conditions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy_policy.html"
+                    class="hover:text-green-400 transition"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Categories -->
+            <div>
+              <h3 class="text-white font-semibold mb-4">Categories</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Vegetables</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Fruits</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Dairy</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Beverages</a
+                  >
+                </li>
+                <li>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Snacks</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
           <div>
-            <h4
-              class="text-white font-semibold text-sm mb-6 uppercase tracking-wider"
-            >
-              Support
-            </h4>
-            <ul class="space-y-3 text-xs">
-              <li>
-                <a href="#" class="hover:text-green-500 transition"
-                  >Track Order</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-500 transition"
-                  >Shipping Policy</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-500 transition"
-                  >Return & Refund</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-500 transition"
-                  >Help Center</a
-                >
-              </li>
-            </ul>
+            <h3 class="text-white font-semibold mb-4">Subscribe</h3>
+            <p class="text-sm mb-4">Get updates about offers and discounts.</p>
+
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="w-full px-3 py-2 rounded-l-lg text-black focus:outline-none"
+              />
+              <button
+                class="bg-green-500 px-4 rounded-r-lg text-white hover:bg-green-600 transition"
+              >
+                <img
+                  src="./assets/img/right_arrow.svg"
+                  alt="6"
+                  class="w-8 h-8 text-white invert brightness-0"
+                />
+              </button>
+            </div>
           </div>
         </div>
 
-        <div>
-          <h4
-            class="text-white font-semibold text-sm mb-6 uppercase tracking-wider"
-          >
-            Join Us
-          </h4>
-          <p class="text-[11px] mb-4 opacity-70">
-            Subscribe to get updates on flash sales!
-          </p>
-          <div class="flex bg-gray-800 rounded-md p-1 border border-gray-700">
-            <input
-              type="email"
-              placeholder="Your email"
-              class="bg-transparent border-none text-xs w-full focus:ring-0 px-3 text-white"
-            />
-            <button
-              class="bg-green-500 text-white w-8 h-8 rounded-md flex items-center justify-center hover:bg-green-600 transition"
-            >
-              <i class="fa-solid fa-paper-plane text-xs"></i>
-            </button>
-          </div>
+        <!-- Divider -->
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400"
+        >
+          © 2026 Groca. All rights reserved.
         </div>
-      </div>
-      <div
-        class="border-t border-gray-800 mt-16 pt-8 text-center text-[10px] tracking-widest opacity-60"
-      >
-        © 2026 GROCA ORGANIC MARKET. ALL RIGHTS RESERVED.
       </div>
     </footer>
+    <!-- ==================== Footer end ======================= -->
 
     <script>
       const btn = document.getElementById("mobile-menu-btn");

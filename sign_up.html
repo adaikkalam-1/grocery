@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Groca</title>
+    <title>Sign up | Groca</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
@@ -39,7 +39,7 @@
       <div class="md:w-1/2 relative overflow-hidden group order-2 md:order-1">
         <div class="absolute inset-0 bg-black/10 z-10"></div>
         <img
-          src="./assets/img/product_12.jpg"
+          src="./assets/img/product_11.jpg"
           alt="Groceries"
           class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
@@ -73,17 +73,29 @@
       </div>
 
       <div
-        class="w-full md:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center order-1 md:order-2"
+        class="w-full md:w-1/2 p-4 sm:p-4 lg:p-10 flex flex-col justify-center order-1 md:order-2"
       >
-        <div class="mb-10 flex flex-col items-center md:items-start">
-          <h1 class="text-2xl mb-2 text-green-600">Welcome Back!</h1>
-          <p class="text-center md:text-left text-green-500">
-            Sign in to your account and start shopping fresh.
-          </p>
+        <div class="mb-4 flex flex-col items-center md:items-start">
+          <h1 class="text-2xl mb-2 text-green-600">Create Account</h1>
         </div>
 
         <form class="space-y-6">
           <div class="space-y-4">
+            <div
+              class="relative border border-orange-800 rounded-md focus-within:border-orange-500"
+            >
+              <i
+                class="fas fa-user absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"
+              ></i>
+
+              <input
+                type="text"
+                placeholder="Enter the name"
+                class="w-full py-3 pl-14 pr-5 bg-transparent border-none outline-none focus:outline-none focus:ring-0 text-slate-700"
+                required
+              />
+            </div>
+
             <div
               class="relative border border-orange-800 rounded-md focus-within:border-orange-500"
             >
@@ -98,6 +110,7 @@
                 required
               />
             </div>
+
             <div
               class="relative border border-orange-800 rounded-md focus-within:border-orange-500"
             >
@@ -118,38 +131,41 @@
                 <i class="fas fa-eye-slash"></i>
               </button>
             </div>
-          </div>
-
-          <div class="flex items-center justify-between text-sm">
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input
-                type="checkbox"
-                class="w-5 h-5 rounded-lg border-2 border-slate-200 text-green-500 focus:ring-green-100 cursor-pointer"
-              />
-              <span class="text-slate-600 group-hover:text-green-600 transition"
-                >Remember me</span
-              >
-            </label>
-            <a
-              href="#"
-              class="text-green-600 hover:text-green-700 transition underline underline-offset-4"
-              >Forgot Password?</a
+            <div
+              class="relative border border-orange-800 rounded-md focus-within:border-orange-500"
             >
+              <i
+                class="fas fa-lock absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"
+              ></i>
+
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="w-full py-3 pl-14 pr-5 bg-transparent border-none outline-none focus:outline-none focus:ring-0 text-slate-700"
+                required
+              />
+              <button
+                type="button"
+                class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-green-500 transition"
+              >
+                <i class="fas fa-eye-slash"></i>
+              </button>
+            </div>
           </div>
 
           <button
             type="submit"
             class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-md shadow-xl shadow-green-200 transition-all hover:scale-[1.02] active:scale-95 text-lg"
           >
-            <a href="./index.html"> Sign In </a>
+            <a href="./index.html"> Sign Up </a>
           </button>
 
           <p class="text-center text-slate-500">
-            Don't have an account?
+            Already have an account?
             <a
-              href="./sign_up.html"
+              href="./login.html"
               class="text-orange-500 hover:text-orange-600 transition ml-1 underline underline-offset-4"
-              >Create Account</a
+              >Login</a
             >
           </p>
         </form>

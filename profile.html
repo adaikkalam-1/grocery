@@ -91,11 +91,13 @@
               <img src="./assets/img/cart.svg" alt="cart" class="w-5 h-5" />
             </button>
           </a>
-          <button
-            class="hidden md:inline-block bg-green-500 text-white px-4 rounded-md hover:bg-green-600 transition h-8 flex justify-center items-center text-center"
-          >
-            Login
-          </button>
+          <a href="./profile.html" class="flex items-center focus:outline-none">
+            <img
+              src="./assets/img/profile.webp"
+              class="w-9 h-9 rounded-md border-2 border-orange-100"
+            />
+          </a>
+
           <!-- Mobile menu button -->
           <button
             class="md:hidden text-gray-700 focus:outline-none"
@@ -123,7 +125,9 @@
         <nav
           class="flex flex-col bg-white px-4 py-2 gap-2 font-medium text-gray-700"
         >
-          <a href="#" class="hover:text-green-500 transition">Home</a>
+          <a href="./index.html" class="hover:text-green-500 transition"
+            >Home</a
+          >
           <a href="./shop.html" class="hover:text-green-500 transition">Shop</a>
           <a href="./offer.html" class="hover:text-green-500 transition"
             >Offers</a
@@ -134,11 +138,13 @@
           <a href="./contact.html" class="hover:text-green-500 transition"
             >Contact</a
           >
-          <button
-            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
-          >
-            Login
-          </button>
+          <!-- <a href="./login.html">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mt-2"
+            >
+              Login
+            </button>
+          </a> -->
         </nav>
       </div>
     </header>
@@ -174,15 +180,15 @@
             <!-- Navigation: Clean & Spaced -->
             <nav class="p-2 space-y-1">
               <a
-                href="#"
+                href="./profile.html"
                 class="flex items-center gap-3.5 px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium bg-green-600 text-white shadow-lg shadow-green-100"
               >
-                <i class="fa-solid fa-grid-2 text-base"></i>
-                Dashboard
+                <i class="fa-solid fa-user text-base"></i>
+                My Account
               </a>
 
               <a
-                href="#"
+                href="./myorders.html"
                 class="flex items-center gap-3.5 px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-green-600 group"
               >
                 <i
@@ -693,6 +699,18 @@
                     >Contact</a
                   >
                 </li>
+                <li>
+                  <a href="./terms.html" class="hover:text-green-400 transition"
+                    >Terms & Conditions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy_policy.html"
+                    class="hover:text-green-400 transition"
+                    >Privacy Policy</a
+                  >
+                </li>
               </ul>
             </div>
 
@@ -701,23 +719,29 @@
               <h3 class="text-white font-semibold mb-4">Categories</h3>
               <ul class="space-y-2 text-sm">
                 <li>
-                  <a href="#" class="hover:text-green-400 transition"
+                  <a href="./shop.html" class="hover:text-green-400 transition"
                     >Vegetables</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-green-400 transition">Fruits</a>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Fruits</a
+                  >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-green-400 transition">Dairy</a>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Dairy</a
+                  >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-green-400 transition"
+                  <a href="./shop.html" class="hover:text-green-400 transition"
                     >Beverages</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-green-400 transition">Snacks</a>
+                  <a href="./shop.html" class="hover:text-green-400 transition"
+                    >Snacks</a
+                  >
                 </li>
               </ul>
             </div>

@@ -1,3 +1,4 @@
+/* ======================= hero banner ==================== */
 .bg_image {
   background:
     linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)),
@@ -10,7 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* Contact page section */
+/* ================= Contact page section ======================= */
 .bg_image_contact {
   background-image: url("./img/bg-1.jpg");
   object-fit: contain;
